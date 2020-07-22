@@ -15,22 +15,22 @@
         </button>
         <div class="main-nav__wrapper">
           <ul class="main-nav__list">
-            <li class="main-nav__list__item">
+            <li class="main-nav__item">
               <a href="index.html">
                 Главная
               </a>
             </li>
-            <li class="main-nav__list__item">
+            <li class="main-nav__item">
               <a href="photo.html">
                 Фото и видео
               </a>
             </li>
-            <li class="main-nav__list__item main-nav__list__item--active">
+            <li class="main-nav__item main-nav__item--active">
               <a>
                 Форма отзыва
               </a>
             </li>
-            <li class="main-nav__list__item">
+            <li class="main-nav__item">
               <a href="#">
                 HTML Academy
               </a>
@@ -41,97 +41,88 @@
     </header>
     <main class="page-main">
       <h1 class="visually-hidden">Оставьте нам свой отзыв</h1>
-      <section class="top-background"></section>
+      <section class="top"></section>
       <section class="promo">
-        <h3 class="promo__title">
+        <h2 class="promo__title">
           Оставьте свой отзыв
-        </h3>
+        </h2>
         <p class="promo__description">
           Помогите нашим отелям стать лучше! Оставьте отзыв о них, а также о посещенных вами достопримечательностях
         </p>
       </section>
       <section class="review">
-        <form class="review-form">
-          <div class="review-form__wrapper">
-            <fieldset class="review-form__personal">
-              <legend class="review-form__title">Представьтесь:</legend>
-              <p class="review-form__item">
-                <label for="name">Имя*:</label>
-                <input id="name" type="text" name="name" required>
-              </p>
-              <p class="review-form__item">
-                <label for="surname">Фамилия*:</label>
-                <input id="surname" type="text" name="surname" required>
-              </p>
-              <p class="review-form__item">
-                <label for="second-name">Отчество:</label>
-                <input id="second-name" type="text" name="second-name">
-              </p>
-            </fieldset>
-          </div>
-          <div class="review-form__wrapper">
-            <fieldset class="review-form__contacts">
-              <legend class="review-form__title">Контактная информация:</legend>
-              <p class="review-form__item">
-                <label for="contact-phone">Контактный телефон*:</label>
-                <input id="contact-phone" type="tel" name="contact-phone">
-              </p>
-              <p class="review-form__item">
-                <label for="contact-mail">Электронная почта*:</label>
-                <input id="contact-mail" type="email" name="contact-mail">
-              </p>
-            </fieldset>
-          </div>
-          <div class="review-form__wrapper">
-            <fieldset class="review-form_impressions">
-              <legend class="review-form__title">Ваше общее впечатление:</legend>
-              <ul>
-                <li class="impressions__radio">
-                  <input class="visually-hidden" type="radio" name="positive" id="positive">
-                  <label for="positive">Скорее положительное</label>
-                </li>
-                <li class="impressions__radio">
-                  <input class="visually-hidden" type="radio" name="negative" id="negative">
-                  <label for="negative">Скорее отрицательное</label>
-                </li>
-                <li class="impressions__radio">
-                  <input class="visually-hidden" type="radio" name="no-answer" id="no-answer">
-                  <label for="no-answer">Затрудняюсь ответить</label>
-                </li>
-              </ul>
-            </fieldset>
-          </div>
-          <div class="review-form__wrapper">
-            <fieldset class="review-form__sights">
-              <legend class="review-form__title">Посещенные достопримечательности:</legend>
-              <ul>
-                <li class="sights__checkbox">
-                  <input class="visually-hidden" type="checkbox" name="devil-bridge" id="devil-bridge">
-                  <label for="devil-bridge">Мост дьявола</label>
-                </li>
-                <li class="sights__checkbox">
-                  <input class="visually-hidden" type="checkbox" name="bell-mountain" id="bell-mountain">
-                  <label for="bell-mountain">Гора-колокол</label>
-                </li>
-                <li class="sights__checkbox">
-                  <input class="visually-hidden" type="checkbox" name="slide-park" id="slide-park">
-                  <label for="slide-park">Слайд-парк</label>
-                </li>
-                <li class="sights__checkbox">
-                  <input class="visually-hidden" type="checkbox" name="red-rocks" id="red-rocks">
-                  <label for="red-rocks">Красные скалы</label>
-                </li>
-              </ul>
-            </fieldset>
-          </div>
-          <div class="review-form__wrapper">
-            <fieldset class="review-form__text">
-              <legend class="review-form__title">Опишите свои эмоции:</legend>
-              <textarea class="review-form__area" name="review-text">
-                Опишите подробно свои восторги
-              </textarea>
-            </fieldset>
-          </div>
+        <form class="review-form" action="https://echo.htmlacademy.ru" method="post">
+          <fieldset class="review-form__wrapper">
+            <legend class="review-form__title">Представьтесь:</legend>
+            <p class="review-form__item">
+              <label for="name">Имя*:</label>
+              <input id="name" type="text" name="name" required>
+            </p>
+            <p class="review-form__item">
+              <label for="surname">Фамилия*:</label>
+              <input id="surname" type="text" name="surname" required>
+            </p>
+            <p class="review-form__item">
+              <label for="second-name">Отчество:</label>
+              <input id="second-name" type="text" name="second-name">
+            </p>
+          </fieldset>
+          <fieldset class="review-form__wrapper">
+            <legend class="review-form__title">Контактная информация:</legend>
+            <p class="review-form__item">
+              <label for="contact-phone">Контактный телефон*:</label>
+              <input id="contact-phone" type="tel" name="contact-phone">
+            </p>
+            <p class="review-form__item">
+              <label for="contact-mail">Электронная почта*:</label>
+              <input id="contact-mail" type="email" name="contact-mail">
+            </p>
+          </fieldset>
+          <fieldset class="review-form__wrapper">
+            <legend class="review-form__title">Ваше общее впечатление:</legend>
+            <ul>
+              <li class="review-form__radio">
+                <input class="visually-hidden" type="radio" name="opinion" id="positive">
+                <label for="positive">Скорее положительное</label>
+              </li>
+              <li class="review-form__radio">
+                <input class="visually-hidden" type="radio" name="opinion" id="negative">
+                <label for="negative">Скорее отрицательное</label>
+              </li>
+              <li class="review-form__radio">
+                <input class="visually-hidden" type="radio" name="opinion" id="no-answer">
+                <label for="no-answer">Затрудняюсь ответить</label>
+              </li>
+            </ul>
+          </fieldset>
+          <fieldset class="review-form__wrapper">
+            <legend class="review-form__title">Посещенные достопримечательности:</legend>
+            <ul>
+              <li class="review-form__checkbox">
+                <input class="visually-hidden" type="checkbox" name="devil-bridge" id="devil-bridge">
+                <label for="devil-bridge">Мост дьявола</label>
+              </li>
+              <li class="review-form__checkbox">
+                <input class="visually-hidden" type="checkbox" name="bell-mountain" id="bell-mountain">
+                <label for="bell-mountain">Гора-колокол</label>
+              </li>
+              <li class="review-form__checkbox">
+                <input class="visually-hidden" type="checkbox" name="slide-park" id="slide-park">
+                <label for="slide-park">Слайд-парк</label>
+              </li>
+              <li class="review-form__checkbox">
+                <input class="visually-hidden" type="checkbox" name="red-rocks" id="red-rocks">
+                <label for="red-rocks">Красные скалы</label>
+              </li>
+            </ul>
+          </fieldset>
+          <fieldset class="review-form__wrapper">
+            <legend class="review-form__title">Опишите свои эмоции:</legend>
+            <textarea class="review-form__area" name="review-text">
+              Опишите подробно свои восторги
+            </textarea>
+          </fieldset>
+          <button class="review-form__button" type="submit">Отправить отзыв</button>
         </form>
       </section>
     </main>
@@ -143,23 +134,23 @@
         <ul class="social__list">
           <li class="social__item">
             <a class="social__link social__link--twitter" href="#">
-              Мы в Твиттере
+              <span class="visually-hidden">Мы в Твиттере</span>
             </a>
           </li>
           <li class="social__item">
             <a class="social__link social__link--facebook" href="#">
-              Мы в Фейсбуке
+              <span class="visually-hidden">Мы в Фейсбуке</span>
             </a>
           </li>
           <li class="social__item">
             <a class="social__link social__link--youtube" href="#">
-              Мы на Youtube
+              <span class="visually-hidden">Мы на Youtube</span>
             </a>
           </li>
         </ul>
       </div>
       <div class="page-footer__copyright copyright">
-        <p class="copyright__text"></p>
+        <p class="copyright__text">Разработано</p>
         <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
       </div>
     </footer>
