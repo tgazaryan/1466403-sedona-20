@@ -2,12 +2,13 @@
 <html class="page" lang="ru">
   <head>
     <meta charset="utf-8">
+    <link href="css/style.css" rel="stylesheet">
     <title>HTML Academy: Седона</title>
   </head>
   <body class="page__body">
     <header class="page-header">
       <a class="page-header__logo" href="index.html">
-        <img src="img/logotype-mobile.svg" width="" height="" alt="">
+        <img src="img/logo-sedona-mobile.svg" width="102" height="84" alt="Седона">
       </a>
       <nav class="main-nav">
         <button class="main-nav__toggle" type="button">
@@ -16,12 +17,12 @@
         <div class="main-nav__wrapper">
           <ul class="main-nav__list">
             <li class="main-nav__item">
-              <a href="index.html">
+              <a class="main-nav__item-link" href="index.html">
                 Главная
               </a>
             </li>
             <li class="main-nav__item">
-              <a href="photo.html">
+              <a class="main-nav__item-link" href="photo.html">
                 Фото и видео
               </a>
             </li>
@@ -31,7 +32,7 @@
               </a>
             </li>
             <li class="main-nav__item">
-              <a href="#">
+              <a class="main-nav__item-link" href="#">
                 HTML Academy
               </a>
             </li>
@@ -118,11 +119,9 @@
           </fieldset>
           <fieldset class="review-form__wrapper">
             <legend class="review-form__title">Опишите свои эмоции:</legend>
-            <textarea class="review-form__area" name="review-text">
-              Опишите подробно свои восторги
-            </textarea>
+            <textarea class="review-form__area" name="review-text">Опишите подробно свои восторги</textarea>
           </fieldset>
-          <button class="review-form__button" type="submit">Отправить отзыв</button>
+          <button class="review-form__button button" type="submit" aria-label="Отправить отзыв">Отправить отзыв</button>
         </form>
       </section>
     </main>
@@ -151,7 +150,9 @@
       </div>
       <div class="page-footer__copyright copyright">
         <p class="copyright__text">Разработано</p>
-        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
+          <span class="visually-hidden">HTML Academy</span>
+        </a>
       </div>
     </footer>
   </body>
