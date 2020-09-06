@@ -13,11 +13,11 @@
   &--accent {
     color: @white;
     background-color: @base-blue;
+  }
 
+  &--reverse {
     @media (min-width: @tablet-width) {
-      &:nth-child(4) {
-        flex-direction: row-reverse;
-      }
+      flex-direction: row-reverse;
     }
   }
 }
@@ -78,17 +78,19 @@
 
 .features-numbered__image {
   min-height: 256px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  @media (min-width: @tablet-width) {
+    width: 67%;
+  }
 
   &--right {
     background-image: url("../img/main-bridge-mobile@1x.jpg");
-    background-position: center;
-    background-repeat: no-repeat;
 
     @media (min-width: @tablet-width) {
-      width: 67%;
       background-image: url("../img/main-bridge-tablet@1x.jpg");
-      background-position: left;
-      background-repeat: no-repeat;
     }
 
     @media (min-width: @desktop-width) {
@@ -98,14 +100,9 @@
 
   &--left {
     background-image: url("../img/main-city-mobile@1x.jpg");
-    background-position: center;
-    background-repeat: no-repeat;
 
     @media (min-width: @tablet-width) {
-      width: 67%;
       background-image: url("../img/main-city-tablet@1x.jpg");
-      background-position: right;
-      background-repeat: no-repeat;
     }
 
     @media (min-width: @desktop-width) {
