@@ -1,13 +1,27 @@
 .promo {
   text-align: center;
   text-transform: uppercase;
+  padding: 30px 15px;
+
+  @media (min-width: @tablet-width) {
+    padding: 30px 120px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 30px 340px;
+  }
 }
 
 .promo__title {
   font-size: 18px;
   font-weight: 700;
+  padding: 0 10px;
+  margin: 0;
+  margin-bottom: 40px;
 }
 
 .promo__description {
   font-size: 14px;
+  margin: 0;
 }
+
