@@ -11,4 +11,23 @@
 .page__body {
   min-height: 100%;
   background-color: @white;
+  margin: 0;
+
+  @media (min-width: @tablet-width) {
+    width: 100%;
+    display: grid;
+    grid-template-rows: min-content 1fr min-content;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 1200px;
+    display: grid;
+    grid-template-rows: min-content 1fr min-content;
+    margin: 0 auto;
+  }
+}
+
+.page-main {
+  display: flex;
+  flex-direction: column;
 }
