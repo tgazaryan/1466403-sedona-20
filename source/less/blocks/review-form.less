@@ -1,8 +1,6 @@
 .review-form {
-  display: flex;
-  flex-direction: column;
-
   @media (min-width: @tablet-width) {
+    display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -11,8 +9,6 @@
 
 .review-form__fieldset {
   position: relative;
-  display: flex;
-  flex-direction: column;
   margin: 0;
   padding: 65px 20px 0;
   border: none;
@@ -21,17 +17,15 @@
   @media (min-width: @tablet-width) {
     width: 100%;
     padding: 65px 0 60px;
-    border: 0;
-    margin: 0;
   }
 
-  &--personal {
+  &--name {
     @media (min-width: @tablet-width) {
       width: 50%;
     }
   }
 
-  &--impression {
+  &--radio {
     @media (min-width: @tablet-width) {
       order: -1;
       width: 50%;
@@ -40,21 +34,23 @@
 }
 
 .review-form__wrapper {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  margin: 0;
 
-  &--contacts {
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
     width: 100%;
+    padding: 0;
   }
 
-  &--sights {
-    width: 46%;
-    margin: 0 auto;
-    padding: 0;
+  &--contacts {
+    flex-direction: column;
+    align-items: flex-start;
 
     @media (min-width: @desktop-width) {
-      width: 100%;
+      width: auto;
+      flex-direction: row;
     }
   }
 }
@@ -74,6 +70,7 @@
 
 .review-form__title {
   position: absolute;
+  display: block;
   top: 20px;
   left: 0;
   right: 0;
@@ -82,18 +79,6 @@
   text-transform: uppercase;
   text-align: center;
   margin-bottom: 15px;
-
-  &--personal {
-    @media (min-width: @tablet-width) {
-      text-align: left;
-    }
-  }
-
-  &--impression {
-    @media (min-width: @tablet-width) {
-      text-align: left;
-    }
-  }
 }
 
 .review-form__item {
@@ -111,6 +96,18 @@
     @media (min-width: @desktop-width) {
       width: auto;
       flex-direction: row;
+    }
+  }
+
+  &--sights {
+    @media (min-width: @tablet-width) {
+      padding-left: 100px;
+      padding-right: 75px;
+    }
+
+    @media (min-width: @desktop-width) {
+      padding-left: 80px;
+      padding-right: 0;
     }
   }
 }
