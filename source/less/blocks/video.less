@@ -41,7 +41,16 @@
   height: auto;
 }
 
-.video-controls__panel {
+.video__controls {
+  min-height: 45px;
+  background-color: @black-60;
+
+  @media (min-width: @tablet-width) {
+    min-height: 93px;
+  }
+}
+
+.video__controls-panel {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -60,16 +69,7 @@
   }
 }
 
-.video-controls {
-  min-height: 45px;
-  background-color: @black-60;
-
-  @media (min-width: @tablet-width) {
-    min-height: 93px;
-  }
-}
-
-.video-controls__buttons {
+.video__controls-buttons {
   position: absolute;
   top: 45px;
   left: 0;
