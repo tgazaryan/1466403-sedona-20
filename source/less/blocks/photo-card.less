@@ -12,6 +12,13 @@
   @media (min-width: @desktop-width) {
     position: relative;
   }
+
+  &--main {
+    @media (min-width: @tablet-width) {
+      width: 100%;
+      height: auto;
+    }
+  }
 }
 
 .photo__title {
@@ -29,12 +36,16 @@
 }
 
 .photo__container {
-  display: flex;
-  flex-direction: column;
   margin: 0 auto;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+  }
 }
 
-.photo__container figcaption {
+.photo__container-text {
   margin: 0;
 
   @media (min-width: @tablet-width) {
