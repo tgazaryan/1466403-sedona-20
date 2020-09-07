@@ -8,15 +8,15 @@
 }
 
 .review-form__fieldset {
-  position: relative;
   margin: 0;
-  padding: 65px 20px 0;
+  padding: 10px 20px;
   border: none;
   border-top: 1px solid @grey;
 
   @media (min-width: @tablet-width) {
     width: 100%;
-    padding: 65px 0 60px;
+    padding: 60px 0 35px;
+    border: none;
   }
 
   &--name {
@@ -35,13 +35,13 @@
 
 .review-form__wrapper {
   margin: 0;
+  padding: 0;
 
   @media (min-width: @tablet-width) {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     width: 100%;
-    padding: 0;
   }
 
   &--contacts {
@@ -51,6 +51,18 @@
     @media (min-width: @desktop-width) {
       width: auto;
       flex-direction: row;
+    }
+  }
+
+  &--sights {
+    @media (min-width: @tablet-width) {
+      width: 75%;
+      margin: 0 auto;
+    }
+
+    @media (min-width: @desktop-width) {
+      padding: 0;
+      width: 100%;
     }
   }
 }
@@ -64,21 +76,57 @@
     flex-direction: row;
     justify-content: space-between;
     width: 100%;
-    padding: 60px 0;
+    padding-top: 25px;
+    padding-bottom: 60px;
   }
 }
 
 .review-form__title {
-  position: absolute;
-  display: block;
-  top: 20px;
-  left: 0;
-  right: 0;
   font-size: 18px;
   font-weight: 700;
   text-transform: uppercase;
   text-align: center;
-  margin-bottom: 15px;
+  margin-top: 0;
+  margin-bottom: 20px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 50px;
+  }
+
+  &--name {
+    @media (min-width: @tablet-width) {
+      text-align: left;
+    }
+  }
+
+  &--radio {
+    @media (min-width: @tablet-width) {
+      text-align: left;
+    }
+  }
+}
+
+.review-form__decorated {
+  @media (min-width: @tablet-width) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &::before,
+    &::after {
+      content: "";
+      height: 1px;
+      width: 25%;
+      background-color: #dbdbdb;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    &::before,
+    &::after {
+      width: 32%;
+    }
+  }
 }
 
 .review-form__item {
@@ -89,25 +137,24 @@
   margin-bottom: 15px;
 
   &--contacts {
+    position: relative;
     flex-direction: column;
     align-items: flex-start;
     width: 100%;
 
     @media (min-width: @desktop-width) {
-      width: auto;
+      width: 45%;
       flex-direction: row;
     }
   }
 
   &--sights {
     @media (min-width: @tablet-width) {
-      padding-left: 100px;
-      padding-right: 75px;
+      width: 45%;
     }
 
     @media (min-width: @desktop-width) {
-      padding-left: 80px;
-      padding-right: 0;
+      width: auto;
     }
   }
 }
@@ -130,7 +177,13 @@
   border: @light-grey 4px solid;
   box-sizing: border-box;
   width: 100%;
-  padding: 16px 20px;
+  min-height: 58px;
+  padding: 0 20px;
+
+  &:hover {
+    background-color: @grey;
+    border-color: @grey;
+  }
 
   &:focus {
     background-color: @white;
@@ -139,12 +192,104 @@
   }
 }
 
+.review-form__input-wrapper {
+  display: flex;
+  width: 100%;
+}
+
 .review-form__radio-label {
+  position: relative;
   font-weight: 700;
+  padding-top: 10px;
+  padding-left: 70px;
+  margin-bottom: 20px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background-color: @light-grey;
+  }
+
+  &:hover::before {
+    background-color: @grey;
+  }
+
+  &:active::before {
+    background-color: @mid-grey;
+  }
+
+  &::after {
+    display: none;
+    content: "";
+    position: absolute;
+    top: 14px;
+    left: 14px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: @dark-grey;
+  }
+
+  &:active::after {
+    background-color: fade(@dark-grey, 30%);
+  }
+}
+
+.review-form__radio:checked + .review-form__radio-label::after {
+  display: block;
 }
 
 .review-form__checkbox-label {
+  position: relative;
   font-weight: 700;
+  padding-top: 10px;
+  padding-left: 70px;
+  margin-bottom: 20px;
+
+  @media (min-width: @tablet-width) {
+    padding-left: 90px;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 55px;
+    height: 55px;
+    border-radius: 5px;
+    background-color: @light-grey;
+  }
+
+  &:hover::before {
+    background-color: @grey;
+  }
+
+  &:active::before {
+    background-color: @mid-grey;
+  }
+
+  &::after {
+    display: none;
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 17px;
+    width: 24px;
+    height: 17px;
+    background-image: url("../img/icon-tick.svg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+  }
+}
+
+.review-form__checkbox:checked + .review-form__checkbox-label::after {
+  display: block;
 }
 
 .review-form__area {
@@ -156,6 +301,11 @@
   font-weight: bold;
   background-color: @light-grey;
   border: @light-grey 4px solid;
+
+  &:hover {
+    background-color: @grey;
+    border-color: @grey;
+  }
 
   &:focus {
     background-color: @white;
@@ -171,6 +321,13 @@
   @media (min-width: @tablet-width) {
     width: auto;
     padding: 15px 60px;
+  }
+
+  &--contacts {
+    width: 58px;
+    background-color: #e6e6e6;
+    border: none;
+    padding: 0 20px;
   }
 }
 
