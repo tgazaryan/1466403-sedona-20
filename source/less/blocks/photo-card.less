@@ -1,12 +1,22 @@
 .photo-card {
+  display: flex;
   font-size: 14px;
-}
+  border-bottom: 1px solid @grey;
+  padding: 20px 0;
 
-.photo__title {
-  text-transform: uppercase;
-  font-weight: 700;
-}
+  @media (min-width: @tablet-width) {
+    padding: 0;
+    border: none;
+  }
 
-.photo__like-number {
-  font-weight: 700;
+  @media (min-width: @desktop-width) {
+    position: relative;
+  }
+
+  &--main {
+    @media (min-width: @tablet-width) {
+      width: 100%;
+      height: auto;
+    }
+  }
 }

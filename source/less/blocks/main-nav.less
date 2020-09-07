@@ -1,12 +1,17 @@
 .main-nav__list {
+  margin: 0;
+  padding: 0;
   list-style: none;
   text-transform: uppercase;
   font-weight: 700;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+  }
 }
 
 .main-nav__item {
   text-align: center;
-  color: @white;
   background-color: @base-blue;
 
   &:hover,
@@ -17,13 +22,43 @@
   &:active {
     background-color: @dark-blue;
   }
+
+  @media (min-width: @tablet-width) {
+    width: 25%;
+    background-color: @white;
+
+    &:hover,
+    &:focus {
+      background-color: @white;
+    }
+
+    &:active {
+      background-color: @white;
+    }
+  }
 }
 
 .main-nav__item-link {
+  display: block;
   color: @white;
   text-decoration: none;
+  padding: 20px 0;
 
   &:active {
     color: @white-30;
+  }
+
+  @media (min-width: @tablet-width) {
+    color: @black;
+    font-size: 14px;
+
+    &:hover,
+    &:focus {
+      color: @base-blue;
+    }
+
+    &:active {
+      color: @black-30;
+    }
   }
 }
