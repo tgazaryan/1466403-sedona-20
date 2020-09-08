@@ -58,8 +58,9 @@
     flex-wrap: nowrap;
     align-items: center;
     margin: 0;
+    padding-left: 25px;
+    padding-right: 25px;
     min-height: 93px;
-    width: 100%;
   }
 }
 
@@ -104,13 +105,6 @@
 
     @media (min-width: @tablet-width) {
       order: -1;
-      padding-left: 25px;
-    }
-  }
-
-  &--fullscreen {
-    @media (min-width: @tablet-width) {
-      padding-right: 25px;
     }
   }
 }
@@ -126,6 +120,11 @@
   left: 20%;
   width: 13px;
   height: 13px;
+  border: none;
   border-radius: 50%;
   background-color: @white;
+
+  &:focus {
+    outline-offset: 2px;
+  }
 }
