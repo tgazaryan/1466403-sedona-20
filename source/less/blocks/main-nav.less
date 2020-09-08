@@ -18,6 +18,19 @@
     display: flex;
     justify-content: space-between;
   }
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 56px;
+    width: 100%;
+    height: 10px;
+    box-shadow: inset 0 -6px 6px 0 fade(#000000, 20%);
+
+    @media (min-width: @tablet-width) {
+      display: none;
+    }
+  }
 }
 
 .main-nav__item {
@@ -89,9 +102,11 @@
   @media (min-width: @tablet-width) {
     display: none;
   }
-}
 
-.main-nav .main-nav__toggle {
+  &:focus {
+    outline-offset: -5px;
+  }
+
   &::before,
   &::after {
     content: "";
@@ -113,47 +128,48 @@
   }
 }
 
-.main-nav .main-nav__list::after {
-  content: "";
-  position: absolute;
-  bottom: 56px;
-  width: 100%;
-  height: 10px;
-  box-shadow: inset 0 -6px 6px 0 fade(#000000, 20%);
+.main-nav--closed {
+  .main-nav__toggle {
+    &::before {
+      content: "";
+      position: absolute;
+      top: 17px;
+      right: 20px;
+      width: 23px;
+      height: 4px;
+      background-color: @base-blue;
+      box-shadow: 0 9px 0 0 @base-blue, 0 19px 0 0 @base-blue;
+      transform: revert;
 
-  @media (min-width: @tablet-width) {
+      &:hover {
+        background-color: fade(@base-blue, 60%);
+        box-shadow: 0 9px 0 0 fade(@base-blue, 60%), 0 19px 0 0 fade(@base-blue, 60%);
+      }
+
+      &:active {
+        background-color: fade(@base-blue, 30%);
+        box-shadow: 0 9px 0 0 fade(@base-blue, 30%), 0 19px 0 0 fade(@base-blue, 30%);
+      }
+    }
+
+    &::after {
+      display: none;
+    }
+  }
+
+  .main-nav__list {
+    @media (max-width: @tablet-width) {
+      display: none;
+    }
+  }
+}
+
+.main-nav--nojs {
+  .main-nav__toggle {
     display: none;
   }
-}
 
-.main-nav--closed .main-nav__toggle::before {
-  content: "";
-  position: absolute;
-  top: 17px;
-  right: 20px;
-  width: 23px;
-  height: 4px;
-  background-color: @base-blue;
-  box-shadow: 0 9px 0 0 @base-blue, 0 19px 0 0 @base-blue;
-  transform: revert;
-
-  &:hover {
-    background-color: fade(@base-blue, 60%);
-    box-shadow: 0 9px 0 0 fade(@base-blue, 60%), 0 19px 0 0 fade(@base-blue, 60%);
-  }
-
-  &:active {
-    background-color: fade(@base-blue, 30%);
-    box-shadow: 0 9px 0 0 fade(@base-blue, 30%), 0 19px 0 0 fade(@base-blue, 30%);
-  }
-}
-
-.main-nav--closed .main-nav__toggle::after {
-  display: none;
-}
-
-@media (max-width: @tablet-width) {
-  .main-nav--closed .main-nav__list {
-    display: none;
+  .main-nav__list {
+    display: block;
   }
 }
