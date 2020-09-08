@@ -25,40 +25,6 @@
   position: relative;
 
   @media (min-width: @tablet-width) {
-    padding-left: 60px;
-    padding-right: 60px;
-  }
-
-  @media (min-width: @desktop-width) {
-    padding-left: 200px;
-    padding-right: 200px;
-  }
-}
-
-.video__image {
-  display: block;
-  width: 100%;
-  height: auto;
-}
-
-.video__controls {
-  min-height: 45px;
-  background-color: @black-60;
-
-  @media (min-width: @tablet-width) {
-    min-height: 93px;
-  }
-}
-
-.video__controls-panel {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  margin-left: 20px;
-  margin-right: 20px;
-
-  @media (min-width: @tablet-width) {
     margin-left: 60px;
     margin-right: 60px;
   }
@@ -69,43 +35,51 @@
   }
 }
 
-.video__controls-scale {
-  margin: 21px 25px;
-  height: 3px;
-  background-color: fade(@white, 20%);
-
-  @media (min-width: @tablet-width) {
-    margin: 45px 166px 45px 93px;
-  }
+.video__image {
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
-.video__controls-buttons {
+.video__controls {
   position: absolute;
-  top: 45px;
+  bottom: -60px;
   left: 0;
   right: 0;
   display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  min-height: 66px;
-  background-color: @light-grey;
-  padding-left: 25px;
-  padding-right: 25px;
+  flex-wrap: wrap;
+  min-height: 45px;
+  margin-right: 20px;
+  margin-left: 20px;
+  background-color: @black-60;
 
   @media (min-width: @tablet-width) {
-    top: 0;
-    min-height: 100%;
-    background: transparent;
+    bottom: 0;
+    flex-wrap: nowrap;
+    align-items: center;
+    margin: 0;
+    min-height: 93px;
+    width: 100%;
   }
+}
+
+.video__controls-scale {
+  position: relative;
+  margin: 21px 25px;
+  width: 100%;
+  height: 3px;
+  background-color: fade(@white, 20%);
 }
 
 .video__controls-button {
   border: none;
   background: transparent;
   fill: @blue-grey;
-  margin-left: 30px;
+  padding: 0;
+  background-color: @light-grey;
 
   @media (min-width: @tablet-width) {
+    background-color: transparent;
     fill: @white;
   }
 
@@ -126,7 +100,32 @@
   }
 
   &--replay {
-    margin-left: 0;
-    margin-right: auto;
+    flex-grow: 1;
+
+    @media (min-width: @tablet-width) {
+      order: -1;
+      padding-left: 25px;
+    }
   }
+
+  &--fullscreen {
+    @media (min-width: @tablet-width) {
+      padding-right: 25px;
+    }
+  }
+}
+
+.video__controls-icon {
+  display: block;
+  padding: 20px;
+}
+
+.video__controls-pointer {
+  position: absolute;
+  top: -5px;
+  left: 20%;
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background-color: @white;
 }
