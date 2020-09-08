@@ -104,27 +104,27 @@
       text-align: left;
     }
   }
-}
 
-.review-form__decorated {
-  @media (min-width: @tablet-width) {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+  &--decorated {
+    @media (min-width: @tablet-width) {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
 
-    &::before,
-    &::after {
-      content: "";
-      height: 1px;
-      width: 25%;
-      background-color: #dbdbdb;
+      &::before,
+      &::after {
+        content: "";
+        height: 1px;
+        width: 25%;
+        background-color: #dbdbdb;
+      }
     }
-  }
 
-  @media (min-width: @desktop-width) {
-    &::before,
-    &::after {
-      width: 32%;
+    @media (min-width: @desktop-width) {
+      &::before,
+      &::after {
+        width: 32%;
+      }
     }
   }
 }
