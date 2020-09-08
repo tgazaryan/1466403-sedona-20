@@ -1,4 +1,17 @@
 .page-header {
+  position: relative;
   display: flex;
   flex-direction: column;
+}
+
+.page-header__logo {
+  position: absolute;
+  bottom: -35px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+
+  @media (min-width: @tablet-width) {
+    top: 0;
+  }
 }
