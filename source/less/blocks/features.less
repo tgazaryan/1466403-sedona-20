@@ -1,13 +1,14 @@
 .features {
   text-transform: uppercase;
+  line-height: 21px;
 }
 
 .features__list {
   list-style: none;
   padding: 0;
   margin: 0;
-  margin-bottom: 10px;
-  margin-top: 35px;
+  margin-top: 39px;
+  margin-bottom: 36px;
 
   @media (min-width: @tablet-width) {
     display: flex;
@@ -22,29 +23,23 @@
   position: relative;
   padding-left: 70px;
   padding-right: 35px;
-  margin-bottom: 25px;
+  margin-bottom: 29px;
 
   @media (min-width: @tablet-width) {
     width: 33%;
     margin: 0;
-    padding-top: 160px;
-    padding-bottom: 60px;
-    padding-left: 32px;
-    padding-right: 32px;
+    padding: 137px 31px 60px;
   }
 
   @media (min-width: @desktop-width) {
-    padding-top: 160px;
-    padding-bottom: 60px;
-    padding-left: 50px;
-    padding-right: 50px;
+    padding: 137px 50px 81px;
   }
 
   &::before {
     position: absolute;
     display: block;
-    top: 0;
-    left: 20px;
+    top: -12px;
+    left: 19px;
     width: 40px;
     height: 40px;
     content: "";
@@ -62,7 +57,7 @@
   &--accomodation {
     &::before {
       background-image: url("../img/icon-house.svg");
-      background-size: 39px 37px;
+      background-size: 41px 37px;
 
       @media (min-width: @tablet-width) {
         background-size: 75px 72px;
@@ -77,10 +72,18 @@
 
     &::before {
       background-image: url("../img/icon-gift.svg");
-      background-size: 32px 38px;
+      background-size: 43px 38px;
 
       @media (min-width: @tablet-width) {
-        background-size: 76px 68px;
+        background-size: 74px 72px;
+      }
+    }
+
+    br {
+      display: none;
+
+      @media (min-width: @desktop-width) {
+        display: inline;
       }
     }
   }
@@ -88,10 +91,18 @@
   &--food {
     &::before {
       background-image: url("../img/icon-burger.svg");
-      background-size: 40px 34px;
+      background-size: 38px 43px;
 
       @media (min-width: @tablet-width) {
-        background-size: 64px 75px;
+        background-size: 74px 72px;
+      }
+    }
+
+    br {
+      display: none;
+
+      @media (min-width: @tablet-width) {
+        display: inline;
       }
     }
   }
@@ -99,10 +110,12 @@
 
 .features__title {
   font-size: 18px;
-  margin: 0;
+  margin-bottom: 18px;
 
   @media (min-width: @tablet-width) {
-    margin-bottom: 30px;
+    font-size: 21px;
+    line-height: 26px;
+    margin-bottom: 23px;
   }
 }
 
