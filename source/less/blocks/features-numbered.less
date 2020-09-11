@@ -1,6 +1,8 @@
 .features-numbered {
   text-align: center;
   list-style: none;
+  font-size: 14px;
+  line-height: 21px;
   background-color: @base-grey;
   margin: 0;
   padding: 0;
@@ -23,7 +25,7 @@
 
   &--top {
     position: relative;
-    padding-top: 35px;
+    padding-top: 32px;
 
     &::before {
       display: block;
@@ -50,66 +52,73 @@
 }
 
 .features-numbered__item {
-  padding: 25px 20px;
+  padding: 27px 32px;
 
   @media (min-width: @tablet-width) {
     width: 33%;
-    padding-top: 50px;
-    padding-bottom: 50px;
+    padding: 43px 10px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 43px;
+    padding-bottom: 63px;
   }
 }
 
 .features-numbered__title {
   font-size: 18px;
   margin: 0;
-  margin-bottom: 20px;
+  margin-bottom: 13px;
 
   @media (min-width: @tablet-width) {
-    padding: 0 40px;
+    font-size: 21px;
+    line-height: 26px;
+    padding: 0 53px;
   }
 
   @media (min-width: @desktop-width) {
-    padding: 0 110px;
+    padding: 0 125px;
   }
 }
 
 .features-numbered__description {
-  font-size: 14px;
   margin: 0;
-  margin-top: 20px;
+  margin-top: 17px;
 
   @media (min-width: @tablet-width) {
-    padding: 0 20px;
+    margin-top: 23px;
+    padding: 0 30px;
   }
 
   @media (min-width: @desktop-width) {
-    padding: 0 50px;
+    padding: 0 48px;
   }
 }
 
 .features-numbered__text {
-  padding-top: 35px;
-  padding-bottom: 35px;
+  padding-top: 39px;
+  padding-bottom: 38px;
 
   @media (min-width: @tablet-width) {
-    width: 33%;
-    padding-top: 30px;
-    padding-bottom: 30px;
+    width: 33.5%;
+    padding-top: 40px;
+    padding-bottom: 43px;
   }
 
   @media (min-width: @desktop-width) {
-    padding-top: 50px;
-    padding-bottom: 50px;
+    padding-top: 48px;
+    padding-bottom: 57px;
   }
 }
 
 .features-numbered__image {
-  min-height: 256px;
+  min-height: 260px;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 
   @media (min-width: @tablet-width) {
+    min-height: min-content;
     width: 67%;
   }
 

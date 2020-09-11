@@ -43,12 +43,13 @@
 
 .photo__container-text {
   margin: 0;
+  padding-top: 9px;
 
   @media (min-width: @tablet-width) {
     display: flex;
     justify-content: space-between;
     background-color: @light-grey;
-    padding: 20px 20px;
+    padding: 14px 20px;
   }
 
   @media (min-width: @desktop-width) {
@@ -61,16 +62,24 @@
   }
 }
 
+.photo__rating {
+  padding: 4px 0;
+
+  @media (min-width: @tablet-width) {
+    padding: 8px 0;
+  }
+}
+
 .photo__like {
   position: relative;
   width: 25px;
   height: 25px;
   border: none;
   background: transparent;
-  margin-right: 10px;
+  margin-right: 8px;
 
   @media (min-width: @tablet-width) {
-    margin-right: 0;
+    margin-right: 2px;
   }
 }
 
