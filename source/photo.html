@@ -3,7 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <link href="css/style.css" rel="stylesheet">
+    <link rel="preload" href="fonts/ptsans.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/ptsansbold.woff2" as="font" type="font/woff2" crossorigin>
     <link href="css/style.min.css" rel="stylesheet">
     <title>HTML Academy: Седона</title>
   </head>
@@ -47,7 +48,7 @@
     <main class="page-main">
       <h1 class="visually-hidden">Фото и видео</h1>
       <section class="top">
-        <img class="top__image" src="img/text-sedona.svg">
+        <img class="top__image" src="img/text-sedona.svg" alt="Седона">
       </section>
       <section class="promo promo--photo">
         <h2 class="promo__title promo__title--photo">
@@ -191,7 +192,7 @@
           </picture>
           <div class="video__controls video__controls-panel">
             <div class="video__controls-scale">
-              <button class="video__controls-pointer" type="button"></button>
+              <button class="video__controls-pointer" type="button" aria-label="Поиск по видео"></button>
             </div>
             <button class="video__controls-button video__controls-button--replay" type="button" aria-label="Проиграть снова">
               <svg class="video__controls-icon" width="16px" height="20px">
