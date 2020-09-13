@@ -11,6 +11,9 @@ const imagemin = require("gulp-imagemin");
 const webp = require("gulp-webp");
 const svgstore = require("gulp-svgstore");
 const del = require("del");
+const uglify = require("gulp-uglify");
+const pipeline =  require("readable-stream").pipeline;
+const htmlmin = require("gulp-htmlmin");
 
 // Styles
 
@@ -31,6 +34,30 @@ const styles = () => {
 
 exports.styles = styles;
 
+//Compress JS
+
+const minJS = () => {
+  return pipeline(
+    gulp.src("source/js/*.js"),
+    uglify(),
+    gulp.dest("build/js")
+  );
+};
+
+exports.minJS = minJS;
+
+//Compress HTML
+
+const minHTML = () => {
+  return gulp.src("source/*.html")
+  .pipe(htmlmin({
+    collapseWhitespace: true,
+    removeComments: true
+  }))
+  .pipe(gulp.dest("build/"));
+};
+
+exports.minHTML = minHTML;
 
 //Images Optimization
 
@@ -92,7 +119,7 @@ exports.clean = clean;
 
 //Build
 
-const build = gulp.series(clean,copy,styles,sprite);
+const build = gulp.series(clean,copy,styles,sprite,minJS,minHTML);
 
 exports.build = build;
 
@@ -102,7 +129,7 @@ exports.build = build;
 const server = (done) => {
   sync.init({
     server: {
-      baseDir: 'build'
+      baseDir: "build"
     },
     cors: true,
     notify: false,

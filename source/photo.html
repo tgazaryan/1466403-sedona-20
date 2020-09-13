@@ -3,7 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <link href="css/style.css" rel="stylesheet">
+    <link rel="preload" href="fonts/ptsans.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/ptsansbold.woff2" as="font" type="font/woff2" crossorigin>
     <link href="css/style.min.css" rel="stylesheet">
     <title>HTML Academy: Седона</title>
   </head>
@@ -47,7 +48,7 @@
     <main class="page-main">
       <h1 class="visually-hidden">Фото и видео</h1>
       <section class="top">
-        <img class="top__image" src="img/text-sedona.svg">
+        <img class="top__image" src="img/text-sedona.svg" alt="Седона">
       </section>
       <section class="promo promo--photo">
         <h2 class="promo__title promo__title--photo">
@@ -62,7 +63,7 @@
           <figure class="photo__container">
             <a href="#">
               <picture>
-                <source type="image/webp" media="(min-width: 1200px" srcset="img/photo-sunset-desktop@1x.webp 1x, img/photo-sunset-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 1200px)" srcset="img/photo-sunset-desktop@1x.webp 1x, img/photo-sunset-desktop@2x.webp 2x">
                 <source type="image/webp" media="(min-width: 768px)" srcset="img/photo-sunset-tablet@1x.webp 1x, img/photo-sunset-tablet@2x.webp 2x">
                 <source type="image/webp" srcset="img/photo-sunset-mobile@1x.webp 1x, img/photo-sunset-mobile@2x.webp 2x">
                 <source media="(min-width: 1200px)" srcset="img/photo-sunset-desktop@1x.jpg 1x, img/photo-sunset-desktop@2x.jpg 2x">
@@ -78,7 +79,7 @@
               <div class="photo__rating">
                 <button class="photo__like" type="button" aria-label="Оценить фото">
                   <svg class="photo__like-icon" width="22px" height="20px">
-                    <use xlink:href="img/sprite.svg#icon-like">
+                    <use xlink:href="img/sprite.svg#icon-like"></use>
                   </svg>
                 </button>
                 <span class="photo__like-number">1350</span>
@@ -90,7 +91,7 @@
           <figure class="photo__container">
             <a href="#">
               <picture>
-                <source type="image/webp" media="(min-width: 1200px" srcset="img/photo-cactus-desktop@1x.webp 1x, img/photo-cactus-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 1200px)" srcset="img/photo-cactus-desktop@1x.webp 1x, img/photo-cactus-desktop@2x.webp 2x">
                 <source type="image/webp" media="(min-width: 768px)" srcset="img/photo-cactus-tablet@1x.webp 1x, img/photo-cactus-tablet@2x.webp 2x">
                 <source type="image/webp" srcset="img/photo-cactus-mobile@1x.webp 1x, img/photo-cactus-mobile@2x.webp 2x">
                 <source media="(min-width: 1200px)" srcset="img/photo-cactus-desktop@1x.jpg 1x, img/photo-cactus-desktop@2x.jpg 2x">
@@ -106,7 +107,7 @@
               <div class="photo__rating">
                 <button class="photo__like" type="button" aria-label="Оценить фото">
                   <svg class="photo__like-icon" width="22px" height="20px">
-                    <use xlink:href="img/sprite.svg#icon-like">
+                    <use xlink:href="img/sprite.svg#icon-like"></use>
                   </svg>
                 </button>
                 <span class="photo__like-number">143</span>
@@ -118,7 +119,7 @@
           <figure class="photo__container">
             <a href="#">
               <picture>
-                <source type="image/webp" media="(min-width: 1200px" srcset="img/photo-roads-desktop@1x.webp 1x, img/photo-roads-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 1200px)" srcset="img/photo-roads-desktop@1x.webp 1x, img/photo-roads-desktop@2x.webp 2x">
                 <source type="image/webp" media="(min-width: 768px)" srcset="img/photo-roads-tablet@1x.webp 1x, img/photo-roads-tablet@2x.webp 2x">
                 <source type="image/webp" srcset="img/photo-roads-mobile@1x.webp 1x, img/photo-roads-mobile@2x.webp 2x">
                 <source media="(min-width: 1200px)" srcset="img/photo-roads-desktop@1x.jpg 1x, img/photo-roads-desktop@2x.jpg 2x">
@@ -134,7 +135,7 @@
               <div class="photo__rating">
                 <button class="photo__like" type="button" aria-label="Оценить фото">
                   <svg class="photo__like-icon" width="22px" height="20px">
-                    <use xlink:href="img/sprite.svg#icon-like">
+                    <use xlink:href="img/sprite.svg#icon-like"></use>
                   </svg>
               </button>
               <span class="photo__like-number">96</span>
@@ -146,7 +147,7 @@
           <figure class="photo__container">
             <a href="#">
               <picture>
-                <source type="image/webp" media="(min-width: 1200px" srcset="img/photo-bridge-desktop@1x.webp 1x, img/photo-bridge-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 1200px)" srcset="img/photo-bridge-desktop@1x.webp 1x, img/photo-bridge-desktop@2x.webp 2x">
                 <source type="image/webp" media="(min-width: 768px)" srcset="img/photo-bridge-tablet@1x.webp 1x, img/photo-bridge-tablet@2x.webp 2x">
                 <source type="image/webp" srcset="img/photo-bridge-mobile@1x.webp 1x, img/photo-bridge-mobile@2x.webp 2x">
                 <source media="(min-width: 1200px)" srcset="img/photo-bridge-desktop@1x.jpg 1x, img/photo-bridge-desktop@2x.jpg 2x">
@@ -162,7 +163,7 @@
               <div class="photo__rating">
                 <button class="photo__like" type="button" aria-label="Оценить фото">
                   <svg class="photo__like-icon" width="22px" height="20px">
-                    <use xlink:href="img/sprite.svg#icon-like">
+                    <use xlink:href="img/sprite.svg#icon-like"></use>
                   </svg>
                 </button>
                 <span class="photo__like-number">254</span>
@@ -182,7 +183,7 @@
         </div>
         <div class="video__container">
           <picture>
-            <source type="image/webp" media="(min-width: 1200px" srcset="img/video-desktop@1x.webp 1x, img/video-desktop@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 1200px)" srcset="img/video-desktop@1x.webp 1x, img/video-desktop@2x.webp 2x">
             <source type="image/webp" media="(min-width: 768px)" srcset="img/video-tablet@1x.webp 1x, img/video-tablet@2x.webp 2x">
             <source type="image/webp" srcset="img/video-mobile@1x.webp 1x, img/video-mobile@2x.webp 2x">
             <source media="(min-width: 1200px)" srcset="img/video-desktop@1x.jpg 1x, img/video-desktop@2x.jpg 2x">
@@ -191,21 +192,21 @@
           </picture>
           <div class="video__controls video__controls-panel">
             <div class="video__controls-scale">
-              <button class="video__controls-pointer" type="button"></button>
+              <button class="video__controls-pointer" type="button" aria-label="Поиск по видео"></button>
             </div>
             <button class="video__controls-button video__controls-button--replay" type="button" aria-label="Проиграть снова">
               <svg class="video__controls-icon" width="16px" height="20px">
-                <use xlink:href="img/sprite.svg#icon-replay">
+                <use xlink:href="img/sprite.svg#icon-replay"></use>
               </svg>
             </button>
             <button class="video__controls-button video__controls-button-subtitles" type="button" aria-label="Подключить субтитры">
               <svg class="video__controls-icon" width="32px" height="20px">
-                <use xlink:href="img/sprite.svg#icon-subtitles">
+                <use xlink:href="img/sprite.svg#icon-subtitles"></use>
               </svg>
             </button>
             <button class="video__controls-button video__controls-button--fullscreen" type="button" aria-label="На весь экран">
               <svg class="video__controls-icon" width="20px" height="20px">
-                <use xlink:href="img/sprite.svg#icon-fullscreen">
+                <use xlink:href="img/sprite.svg#icon-fullscreen"></use>
             </svg>
           </button>
           </div>
@@ -221,7 +222,7 @@
           <li class="social__item">
             <a class="social__link social__link--twitter" href="#">
               <svg width="17.5px" height="14.663px">
-                <use xlink:href="img/sprite.svg#icon-twitter">
+                <use xlink:href="img/sprite.svg#icon-twitter"></use>
               </svg>
               <span class="visually-hidden">Мы в Твиттере</span>
             </a>
@@ -229,7 +230,7 @@
           <li class="social__item">
             <a class="social__link social__link--facebook" href="#">
               <svg width="8.672px" height="18.944px">
-                <use xlink:href="img/sprite.svg#icon-facebook">
+                <use xlink:href="img/sprite.svg#icon-facebook"></use>
               </svg>
               <span class="visually-hidden">Мы в Фейсбуке</span>
             </a>
@@ -237,7 +238,7 @@
           <li class="social__item">
             <a class="social__link social__link--youtube" href="#">
               <svg width="19.979px" height="14.015px">
-                <use xlink:href="img/sprite.svg#icon-youtube">
+                <use xlink:href="img/sprite.svg#icon-youtube"></use>
               </svg>
               <span class="visually-hidden">Мы на Youtube</span>
             </a>
@@ -248,7 +249,7 @@
         <p class="copyright__text">Разработано</p>
         <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
           <svg width="26.943px" height="34.09px">
-            <use xlink:href="img/sprite.svg#icon-academy">
+            <use xlink:href="img/sprite.svg#icon-academy"></use>
           </svg>
           <span class="visually-hidden">HTML Academy</span>
         </a>

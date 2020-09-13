@@ -3,7 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <link href="css/style.css" rel="stylesheet">
+    <link rel="preload" href="fonts/ptsans.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/ptsansbold.woff2" as="font" type="font/woff2" crossorigin>
     <link href="css/style.min.css" rel="stylesheet">
     <title>HTML Academy: Седона</title>
   </head>
@@ -47,7 +48,7 @@
     <main class="page-main">
       <h1 class="visually-hidden">Оставьте нам свой отзыв</h1>
       <section class="top">
-        <img class="top__image" src="img/text-sedona.svg">
+        <img class="top__image" src="img/text-sedona.svg" alt="Седона">
       </section>
       <section class="promo promo--review">
         <h2 class="promo__title promo__title--review">
@@ -84,9 +85,9 @@
                 </label>
                 <span class="review-form__input-wrapper">
                   <input class="review-form__input" id="phone" type="tel" name="phone">
-                  <button class="review-form__button review-form__button--contacts" type="button">
+                  <button class="review-form__button review-form__button--contacts" type="button" aria-label="Контактный телефон">
                     <svg width="18px" height="18px">
-                      <use xlink:href="img/sprite.svg#icon-phone">
+                      <use xlink:href="img/sprite.svg#icon-phone"></use>
                     </svg>
                   </button>
                 </span>
@@ -95,9 +96,9 @@
                 <label class="review-form__label review-form__label--contacts" for="mail">Электронная почта*:</label>
                 <span class="review-form__input-wrapper">
                   <input class="review-form__input" id="mail" type="email" name="mail">
-                  <button class="review-form__button review-form__button--contacts" type="button">
+                  <button class="review-form__button review-form__button--contacts" type="button" aria-label="Электронная почта">
                     <svg width="16px" height="16px">
-                      <use xlink:href="img/sprite.svg#icon-mail">
+                      <use xlink:href="img/sprite.svg#icon-mail"></use>
                     </svg>
                   </button>
                 </span>
@@ -144,7 +145,8 @@
           </fieldset>
           <fieldset class="review-form__fieldset review-form__fieldset--emotions">
             <h2 class="review-form__title review-form__title--emotions review-form__title--decorated">Опишите свои эмоции:</h2>
-            <textarea class="review-form__area" name="review-text">Опишите подробно все свои восторги</textarea>
+            <label class="visually-hidden" for="review-text">Поделитесь с нами:</label>
+            <textarea class="review-form__area" name="review-text" id="review-text">Опишите подробно все свои восторги</textarea>
           </fieldset>
           <div class="review-form__submit">
             <button class="review-form__button button" type="submit" aria-label="Отправить отзыв">Отправить отзыв</button>
@@ -162,7 +164,7 @@
           <li class="social__item">
             <a class="social__link social__link--twitter" href="#">
               <svg width="17.5px" height="14.663px">
-                <use xlink:href="img/sprite.svg#icon-twitter">
+                <use xlink:href="img/sprite.svg#icon-twitter"></use>
               </svg>
               <span class="visually-hidden">Мы в Твиттере</span>
             </a>
@@ -170,7 +172,7 @@
           <li class="social__item">
             <a class="social__link social__link--facebook" href="#">
               <svg width="8.672px" height="18.944px">
-                <use xlink:href="img/sprite.svg#icon-facebook">
+                <use xlink:href="img/sprite.svg#icon-facebook"></use>
               </svg>
               <span class="visually-hidden">Мы в Фейсбуке</span>
             </a>
@@ -178,7 +180,7 @@
           <li class="social__item">
             <a class="social__link social__link--youtube" href="#">
               <svg width="19.979px" height="14.015px">
-                <use xlink:href="img/sprite.svg#icon-youtube">
+                <use xlink:href="img/sprite.svg#icon-youtube"></use>
               </svg>
               <span class="visually-hidden">Мы на Youtube</span>
             </a>
@@ -189,7 +191,7 @@
         <p class="copyright__text">Разработано</p>
         <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
           <svg width="26.943px" height="34.09px">
-            <use xlink:href="img/sprite.svg#icon-academy">
+            <use xlink:href="img/sprite.svg#icon-academy"></use>
           </svg>
           <span class="visually-hidden">HTML Academy</span>
         </a>
